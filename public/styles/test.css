@@ -1,0 +1,106 @@
+.library-section {
+    width: 100%;
+    background-color: var(--main-color_primary);
+    color: var(--main-color_secondary);
+    text-align: center;
+}
+
+.library-header {
+    padding: 3rem 0 2rem;
+    width: 65%;
+    margin-inline: auto;
+}
+
+.library-subtitle {
+    display: inline-block;
+    margin-inline: auto;
+    color: var(--main-color_accent);
+    font-size: var(--fs-xxs);
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.5px;
+}
+
+.library-title {
+    text-align: center;
+    margin-block: 1rem 0.5rem;
+}
+
+.library-description {
+    padding-top: 0.75rem;
+    width: 75%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.library-content {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 100px;
+}
+
+.library-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.library-item-wrapper {
+    flex: 1 1 25%; /* Each item will take 25% of the width */
+    padding: 10px;
+}
+
+.library-item {
+    padding: 5px;
+    border: 5px solid transparent;
+    border-radius: 1rem;
+    transition: 0.4s;
+    position: relative;
+}
+
+.gradient-ingredient {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border: 5px solid transparent;
+    border-radius: 0.5rem;
+    box-sizing: content;
+}
+
+.library-item:hover {
+    border: 5px solid var(--colors-base_grey300);
+}
+
+.library-item img {
+    width: 100%;
+    display: block;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+@media (max-width: 1280px) {
+    .library-item-wrapper {
+        flex: 1 1 50%; /* Each item will take 50% of the width */
+    }
+}
+
+@media (max-width: 768px) {
+    .library-item-wrapper {
+        flex: 1 1 50%; /* Each item will take 50% of the width */
+    }
+
+    .library-container {
+        justify-content: space-between; /* Adjusting the justify-content to space-between */
+        max-width: 600px; /* Set the max-width to limit the container's width */
+    }
+}
+
+@media (max-width: 480px) {
+    .library-item-wrapper {
+        flex: 1 1 100%; /* Each item will take 100% of the width */
+    }
+}
